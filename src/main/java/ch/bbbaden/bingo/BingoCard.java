@@ -44,10 +44,8 @@ public class BingoCard {
      * @return True if the card has won, false otherwise
      */
     public boolean hasWon() {
-        return !Arrays.stream(numbers)
-                .filter(number -> number != 0)
-                .findFirst()
-                .isPresent();
+        return Arrays.stream(numbers)
+                .allMatch(number -> number == 0);
     }
 
     /**
