@@ -1,0 +1,17 @@
+image: maven:3.8.6-openjdk-18
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - echo "Building project for $CI_COMMIT_REF_NAME branch"
+    - mvn clean install -B
+
+test:
+  stage: test
+  script:
+    - echo "Executing tests"
+    - mvn test
