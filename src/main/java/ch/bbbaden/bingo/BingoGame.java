@@ -53,8 +53,9 @@ public class BingoGame implements Game {
 
     public void evaluateWinner() {
         Player winner = getWinner();
-        double sum = players.stream().mapToDouble(Player::getStake).sum();
+        int sum = players.stream().mapToInt(Player::getStake).sum();
         winner.addBalance(sum);
+        players.forEach(player -> player.setStake(0));
         notifyPlayerInformation();
     }
 

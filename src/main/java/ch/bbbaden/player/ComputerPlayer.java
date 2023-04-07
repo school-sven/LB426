@@ -15,8 +15,8 @@ public class ComputerPlayer extends Player {
      * {@inheritDoc}
      */
     @Override
-    public double getPlayerStake() {
-        return Math.round(RANDOM.nextDouble(balance));
+    public int getPlayerStake() {
+        return Math.round(RANDOM.nextInt(balance.getSum()));
     }
 
 }

@@ -2,7 +2,7 @@ package ch.bbbaden.player;
 
 public class ActualPlayer extends Player {
 
-    public ActualPlayer(String name, double balance) {
+    public ActualPlayer(String name, int balance) {
         super(name, balance);
     }
 
@@ -10,9 +10,9 @@ public class ActualPlayer extends Player {
      * {@inheritDoc}
      */
     @Override
-    public double getPlayerStake() {
-        double selectedStake = PlayerGui.getPlayerStake();
-        if (selectedStake > balance) {
+    public int getPlayerStake() {
+        int selectedStake = PlayerGui.getPlayerStake();
+        if (selectedStake > balance.getSum()) {
             System.out.println("Du kannst nicht mehr setzen als du besitzt!");
             return getPlayerStake();
         }

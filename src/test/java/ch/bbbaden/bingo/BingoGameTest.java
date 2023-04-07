@@ -57,6 +57,7 @@ class BingoGameTest {
 
         // when
         game.initializePlayers();
+        List<Integer> stakes = players.stream().map(Player::getStake).toList();
         double totalStake = players.stream().mapToDouble(Player::getStake).sum();
         game.startGame();
         Player winner = players.stream().filter(player -> player.getBingoCard().hasWon()).findFirst().orElse(null);
@@ -64,11 +65,13 @@ class BingoGameTest {
 
         // then
         assertNotNull(winner);
-        for (Player player : players) {
+        for (int i = 0; i < players.size(); i++) {
+            Player player = players.get(i);
+            int stake = stakes.get(i);
             if (player.equals(winner)) {
-                assertEquals(player.getBalance(), 100 - player.getStake() + totalStake);
+                assertEquals(player.getBalance(), 100 - stake + totalStake);
             } else {
-                assertEquals(player.getBalance(), 100 - player.getStake());
+                assertEquals(player.getBalance(), 100 - stake);
             }
         }
     }

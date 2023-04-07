@@ -31,8 +31,8 @@ class PlayerTest {
         // given
         player.setStake(10);
         String expectedOutput = player.getName() + "\n" +
-                "Guthaben: 100.0\n" +
-                "Einsatz: 10.0";
+                "Guthaben: 100\n" +
+                "Einsatz: 10";
 
         // when
         String actualOutput = player.toString();

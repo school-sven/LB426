@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CasinoGui {
 
-    private static final Scanner SCANNER = new Scanner(System.in);
+    private static Scanner SCANNER = new Scanner(System.in);
 
     public static int showContextMenu() {
         while (true) {
@@ -47,11 +47,11 @@ public class CasinoGui {
         }
     }
 
-    public static double getPlayerBalance() {
+    public static int getPlayerBalance() {
         while (true) {
             System.out.println("Bitte gib dein Startguthaben ein:");
             try {
-                return SCANNER.nextDouble();
+                return SCANNER.nextInt();
             } catch (RuntimeException e) {
                 System.out.println("Ungültige Eingabe! Bitte gib eine Zahl ein!");
             } finally {
@@ -60,7 +60,8 @@ public class CasinoGui {
         }
     }
 
-    public Scanner getScanner() {
-        return SCANNER;
+    public void setScanner(Scanner scanner) {
+        this.SCANNER = scanner;
     }
+
 }

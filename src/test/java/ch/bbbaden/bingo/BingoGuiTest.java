@@ -78,7 +78,7 @@ class BingoGuiTest {
         Player player1 = new ComputerPlayer("Computer-player 1");
         Player player2 = new ComputerPlayer("Computer-player 2");
         List<Player> players = new ArrayList<>(Arrays.asList(player1, player2));
-        String expectedOutput = player1.toString() + "\n" + "--------------------\n" + player2.toString() + "\n" + "--------------------\n";
+        String expectedOutput = player1 + "\n" + "--------------------\n" + player2 + "\n" + "--------------------\n";
 
         // when
         bingoGui.updatePlayerInformation(players);

@@ -1,18 +1,20 @@
 package ch.bbbaden.player;
 
 import ch.bbbaden.bingo.BingoCard;
+import ch.bbbaden.jeton.Jeton;
 
 public abstract class Player {
 
     protected final String name;
 
-    protected double balance;
-    protected double stake;
+    protected Jeton balance;
+    protected Jeton stake;
     protected BingoCard bingoCard;
 
-    public Player(String name, double balance) {
+    public Player(String name, int balance) {
         this.name = name;
-        this.balance = balance;
+        this.balance = new Jeton(balance);
+        this.stake = new Jeton(0);
     }
 
     /**
@@ -20,22 +22,22 @@ public abstract class Player {
      *
      * @return the stake of the player
      */
-    public abstract double getPlayerStake();
+    public abstract int getPlayerStake();
 
     public String getName() {
         return name;
     }
 
     public double getBalance() {
-        return balance;
+        return balance.getSum();
     }
 
-    public double getStake() {
-        return stake;
+    public int getStake() {
+        return stake.getSum();
     }
 
-    public void setStake(double stake) {
-        this.stake = stake;
+    public void setStake(int stake) {
+        this.stake.add(stake);
     }
 
     public BingoCard getBingoCard() {
@@ -46,12 +48,12 @@ public abstract class Player {
         this.bingoCard = bingoCard;
     }
 
-    public void addBalance(double balance) {
-        this.balance += balance;
+    public void addBalance(int balance) {
+        this.balance.add(balance);
     }
 
-    public void subtractBalance(double balance) {
-        this.balance -= balance;
+    public void subtractBalance(int balance) {
+        this.balance.remove(balance);
     }
 
     /**
@@ -61,8 +63,9 @@ public abstract class Player {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append(name).append(System.lineSeparator());
-        sb.append("Guthaben: ").append(balance).append(System.lineSeparator());
-        sb.append("Einsatz: ").append(stake);
+        sb.append("Guthaben: ").append(balance.getSum()).append(System.lineSeparator());
+        sb.append("Einsatz: ").append(stake.getSum());
         return sb.toString();
     }
+
 }
