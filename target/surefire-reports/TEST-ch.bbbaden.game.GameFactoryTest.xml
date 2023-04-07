@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ch.bbbaden.game.GameFactoryTest" time="0.03" tests="2" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/svenmaerki/programming/schule/LB426_Casino/target/test-classes:/Users/svenmaerki/programming/schule/LB426_Casino/target/classes:/Users/svenmaerki/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.2/junit-jupiter-5.9.2.jar:/Users/svenmaerki/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/svenmaerki/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/svenmaerki/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/svenmaerki/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/svenmaerki/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.2/junit-jupiter-params-5.9.2.jar:/Users/svenmaerki/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/svenmaerki/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CH"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/19.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/svenmaerki/programming/schule/LB426_Casino/target/surefire/surefirebooter-20230403120202145_3.jar /Users/svenmaerki/programming/schule/LB426_Casino/target/surefire 2023-04-03T12-02-02_024-jvmRun1 surefire-20230403120202145_1tmp surefire_0-20230403120202145_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/svenmaerki/programming/schule/LB426_Casino/target/test-classes:/Users/svenmaerki/programming/schule/LB426_Casino/target/classes:/Users/svenmaerki/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.2/junit-jupiter-5.9.2.jar:/Users/svenmaerki/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/Users/svenmaerki/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/svenmaerki/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/Users/svenmaerki/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/svenmaerki/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.2/junit-jupiter-params-5.9.2.jar:/Users/svenmaerki/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.2/junit-jupiter-engine-5.9.2.jar:/Users/svenmaerki/.m2/repository/org/junit/platform/junit-platform-engine/1.9.2/junit-platform-engine-1.9.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/svenmaerki"/>
+    <property name="user.language" value="de"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-10-18"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/19.0.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/svenmaerki/programming/schule/LB426_Casino"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/svenmaerki/programming/schule/LB426_Casino/target/surefire/surefirebooter-20230403120202145_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="19.0.1"/>
+    <property name="user.name" value="svenmaerki"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="13.2.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/svenmaerki/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/42/6fmrmrjd345886z7c6znmc540000gn/T/"/>
+    <property name="java.version" value="19.0.1"/>
+    <property name="user.dir" value="/Users/svenmaerki/programming/schule/LB426_Casino"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/svenmaerki/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="19.0.1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="testCreateGameWithBingo" classname="ch.bbbaden.game.GameFactoryTest" time="0.021">
+    <system-out><![CDATA[Test Name:
+Guthaben: 100.0
+Einsatz: 0.0
+--------------------
+Spieler 1:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 2:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 3:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 4:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 5:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 6:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 7:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 8:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 9:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 10:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 11:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 12:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 13:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 14:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 15:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 16:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 17:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 18:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 19:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 20:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 21:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 22:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 23:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 24:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 25:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 26:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 27:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 28:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 29:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 30:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 31:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 32:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 33:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 34:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 35:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 36:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 37:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 38:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 39:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 40:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 41:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 42:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 43:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 44:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 45:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 46:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 47:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 48:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 49:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 50:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 51:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 52:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 53:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 54:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 55:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 56:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 57:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 58:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 59:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 60:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 61:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 62:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 63:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 64:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 65:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 66:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 67:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 68:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 69:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 70:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 71:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 72:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 73:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 74:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+Spieler 75:
+Guthaben: 100.0
+Einsatz: 10.0
+--------------------
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateGameWithRoulette" classname="ch.bbbaden.game.GameFactoryTest" time="0.002"/>
+</testsuite>

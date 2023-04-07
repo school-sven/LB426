@@ -1,0 +1,5 @@
+ch/bbbaden/game/GameFactoryTest.class
+ch/bbbaden/random/RandomImplTest.class
+ch/bbbaden/random/RandomMockTest.class
+ch/bbbaden/bingo/BingoCardTest.class
+ch/bbbaden/game/GameTypesTest.class

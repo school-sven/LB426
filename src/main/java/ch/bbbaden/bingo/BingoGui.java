@@ -4,30 +4,28 @@ import ch.bbbaden.player.Player;
 
 import java.util.List;
 
-public class BingoGui {
+public class BingoGui implements BingoObserver {
 
-    public static void printChosenNumber(int number) {
+    public void updateChosenNumber(int number) {
         System.out.println("Die gezogene Nummer ist: " + number);
+        System.out.println("--------------------");
     }
 
-    public static void printPlayerHasNumber(String playerName) {
+    public void updatePlayerHasNumber(String playerName) {
         System.out.println(playerName + " hat die Zahl auf seiner Karte!");
     }
 
-    public static void printBingoCard(Player player) {
+    public void updateBingoCard(Player player) {
         System.out.println(player.getName() + ":");
         System.out.println(player.getBingoCard());
-        printSeparator();
+        System.out.println("--------------------");
     }
 
-    public static void printPlayerInformation(List<Player> players) {
+    public void updatePlayerInformation(List<Player> players) {
         for (Player player : players) {
             System.out.println(player.toString());
-            printSeparator();
+            System.out.println("--------------------");
         }
     }
 
-    public static void printSeparator() {
-        System.out.println("--------------------");
-    }
 }

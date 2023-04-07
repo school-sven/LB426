@@ -1,24 +1,21 @@
 package ch.bbbaden.bingo;
 
-import ch.bbbaden.random.Random;
-import ch.bbbaden.random.RandomImpl;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class BingoCard {
 
     private static final int CARD_SIZE = 25;
     private static final int NUMBERS_PER_ROW = 5;
-    private static final Random RANDOM = RandomImpl.getInstance();
+    private static final Random RANDOM = new Random();
 
+    private final int[] numbers = new int[CARD_SIZE];
     private final int maxNumber;
-    private final int[] numbers;
 
     public BingoCard(int maxNumber) {
         this.maxNumber = maxNumber;
-        this.numbers = new int[CARD_SIZE];
         initializeRemainingNumbers();
     }
 
@@ -44,8 +41,7 @@ public class BingoCard {
      * @return True if the card has won, false otherwise
      */
     public boolean hasWon() {
-        return Arrays.stream(numbers)
-                .allMatch(number -> number == 0);
+        return Arrays.stream(numbers).allMatch(number -> number == 0);
     }
 
     /**

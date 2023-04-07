@@ -4,23 +4,11 @@ import ch.bbbaden.bingo.BingoCard;
 
 public abstract class Player {
 
-    /**
-     * The name of the Player
-     */
     protected final String name;
-    /**
-     * The balance of the Player
-     */
-    protected double balance;
-    /**
-     * The stake of the Player
-     */
-    protected double stake;
-    /**
-     * The BingoCard of the Player for the Bingo game
-     */
-    protected BingoCard bingoCard;
 
+    protected double balance;
+    protected double stake;
+    protected BingoCard bingoCard;
 
     public Player(String name, double balance) {
         this.name = name;

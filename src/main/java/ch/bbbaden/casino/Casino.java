@@ -9,6 +9,7 @@ import ch.bbbaden.player.Player;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Casino {
 
@@ -20,21 +21,20 @@ public class Casino {
         showContextMenu();
     }
 
-    public void showContextMenu() {
+    private void showContextMenu() {
         do {
             int selectedAction = CasinoGui.showContextMenu();
 
             switch (selectedAction) {
-                case 1:
-                case 2:
-                    currentGame = GameFactory.createGame(GameTypes.getById(selectedAction), players);
-                    break;
-                case 3:
+                case 1, 2 -> currentGame = GameFactory.createGame(Objects.requireNonNull(GameTypes.getById(selectedAction)), players);
+                case 3 -> {
                     System.out.println("Auf Wiedersehen!");
                     System.exit(0);
-                default:
+                }
+                default -> {
                     System.out.println("Ungültige Eingabe! Bitte gib eine Zahl zwischen 1 und 3 ein!");
                     showContextMenu();
+                }
             }
 
             if (currentGame != null) {

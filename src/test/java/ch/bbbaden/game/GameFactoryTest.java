@@ -1,15 +1,15 @@
 package ch.bbbaden.game;
 
+import ch.bbbaden.bingo.BingoGame;
 import ch.bbbaden.player.ActualPlayer;
+import ch.bbbaden.roulette.RouletteGame;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 class GameFactoryTest {
-
-    private static final int MAX_NUMBER = 75;
 
     @Test
     public void testCreateGameWithBingo() {
@@ -22,6 +22,7 @@ class GameFactoryTest {
 
         // then
         assertNotNull(game);
+        assertTrue(game instanceof BingoGame);
     }
 
     @Test
@@ -35,6 +36,17 @@ class GameFactoryTest {
 
         // then
         assertNotNull(game);
+        assertTrue(game instanceof RouletteGame);
+    }
+
+    @Test
+    public void testCreateGameWithUnknownGameType() {
+        // given
+        var player = new ActualPlayer("Test Name", 100);
+
+        // when
+        // then
+        assertThrows(NullPointerException.class, () -> GameFactory.createGame(null, List.of(player)));
     }
 
 }
