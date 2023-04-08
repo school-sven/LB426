@@ -5,7 +5,7 @@ import ch.bbbaden.player.ActualPlayer;
 import ch.bbbaden.roulette.RouletteGame;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,7 +18,7 @@ class GameFactoryTest {
         var player = new ActualPlayer("Test Name", 100);
 
         // when
-        Game game = GameFactory.createGame(gameType, List.of(player));
+        Game game = GameFactory.createGame(gameType, player, new ArrayList<>());
 
         // then
         assertNotNull(game);
@@ -32,7 +32,7 @@ class GameFactoryTest {
         var player = new ActualPlayer("Test Name", 100);
 
         // when
-        Game game = GameFactory.createGame(gameType, List.of(player));
+        Game game = GameFactory.createGame(gameType, player, new ArrayList<>());
 
         // then
         assertNotNull(game);
@@ -46,7 +46,7 @@ class GameFactoryTest {
 
         // when
         // then
-        assertThrows(NullPointerException.class, () -> GameFactory.createGame(null, List.of(player)));
+        assertThrows(NullPointerException.class, () -> GameFactory.createGame(null, player, new ArrayList<>()));
     }
 
 }

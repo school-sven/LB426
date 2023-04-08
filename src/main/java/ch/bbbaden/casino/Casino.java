@@ -14,6 +14,7 @@ import java.util.Objects;
 public class Casino {
 
     private final List<Player> players = new ArrayList<>();
+    private ActualPlayer actualPlayer;
     private Game currentGame;
 
     public void run() {
@@ -26,7 +27,7 @@ public class Casino {
             int selectedAction = CasinoGui.showContextMenu();
 
             switch (selectedAction) {
-                case 1, 2 -> currentGame = GameFactory.createGame(Objects.requireNonNull(GameTypes.getById(selectedAction)), players);
+                case 1, 2 -> currentGame = GameFactory.createGame(Objects.requireNonNull(GameTypes.getById(selectedAction)), actualPlayer, players);
                 case 3 -> {
                     System.out.println("Auf Wiedersehen!");
                     System.exit(0);
@@ -46,7 +47,7 @@ public class Casino {
     }
 
     private void initializePlayers() {
-        players.add(new ActualPlayer(CasinoGui.getPlayerName(), CasinoGui.getPlayerBalance()));
+        actualPlayer = new ActualPlayer(CasinoGui.getPlayerName(), CasinoGui.getPlayerBalance());
         int numberOfPlayers = CasinoGui.getNumberOfPlayers();
         for (int i = 0; i < numberOfPlayers; i++) {
             players.add(new ComputerPlayer("Spieler " + (i + 1)));
