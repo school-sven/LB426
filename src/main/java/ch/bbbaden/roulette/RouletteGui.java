@@ -9,6 +9,15 @@ public class RouletteGui implements RouletteObserver {
 
     private static final Scanner SCANNER = new Scanner(System.in);
 
+    public static void getAllBetTypes() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Roulette Wetttypen (Typ + Faktor):");
+        for (RouletteBetTypes bet : RouletteBetTypes.values()) {
+            sb.append(System.lineSeparator()).append(bet.getKey()).append(" (").append(bet.getMultiplier()).append("x)");
+        }
+        System.out.println(sb);
+    }
+
     public static RouletteBetTypes getPlayerBet() {
         do {
             System.out.println("Bitte gib eine Zahl von 0 - 36 ein oder die Farbe 'rot' oder 'schwarz'");

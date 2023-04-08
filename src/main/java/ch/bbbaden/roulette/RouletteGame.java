@@ -25,6 +25,7 @@ public class RouletteGame implements Game {
      * {@inheritDoc}
      */
     public void initializePlayers() {
+        RouletteGui.getAllBetTypes();
         do {
             RouletteBet bet = new RouletteBet(RouletteGui.getPlayerBet(), actualPlayer.getPlayerStake());
             actualPlayer.subtractBalance(bet.betValue());
